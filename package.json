@@ -1,0 +1,32 @@
+{
+  "name": "la-permit-data-engine",
+  "version": "0.1.0",
+  "description": "Data engine and outreach automation for LA County construction contractors — Inngest pipelines, Drizzle/Postgres schema, permit & inspection ingestion, ICP scoring, and multi-channel outreach.",
+  "scripts": {
+    "start": "tsx src/serve.ts",
+    "dev:serve": "tsx watch src/serve.ts",
+    "dev:inngest": "npx inngest-cli@latest dev -u http://localhost:3000/api/inngest",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.90.0",
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.18",
+    "inngest": "^4.2.4",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260511.1",
+    "@types/pg": "^8.20.0",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.90.0"
+  }
+}
