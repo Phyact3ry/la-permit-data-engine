@@ -1,0 +1,13 @@
+name = "la-permit-contractor-api"
+main = "src/worker/index.ts"
+compatibility_date = "2025-01-01"
+account_id = "<your-cloudflare-account-id>"
+
+[vars]
+SUPABASE_URL = "https://<your-project>.supabase.co"
+# SUPABASE_SERVICE_KEY добавить через: wrangler secret put SUPABASE_SERVICE_KEY
+
+[[d1_databases]]
+binding = "DB"
+database_name = "la-permit-leads"
+database_id = "<your-d1-database-id>"
